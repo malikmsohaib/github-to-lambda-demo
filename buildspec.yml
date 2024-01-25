@@ -3,7 +3,11 @@ phases:
   install:
     runtime-versions:
       python: 3.8
+      
     commands:
+    pre_build:
+    commands:
+      - pip install --upgrade pip setuptools
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t lib
   build:
