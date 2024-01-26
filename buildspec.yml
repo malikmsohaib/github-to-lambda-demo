@@ -27,6 +27,7 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t lib || exit 1
+      - pip install pandas-1.4.2-cp310-cp310-win32.whl
   build:
     commands:
       - echo "Zipping deployment package..."
