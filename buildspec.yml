@@ -36,7 +36,7 @@ phases:
   post_build:
     commands:
       - echo "Updating Lambda function..."
-      - aws lambda update-function-code --function-name github-to-lambda-demo --zip-file fileb://deployment_package.zip || exit 1
+      - aws lambda update-function-code --function-name github-to-lambda-demo || exit 1
       - echo "Updating Lambda function configuration..."
       - aws lambda update-function-configuration --function-name github-to-lambda-demo --layers arn:aws:lambda:us-east-1:289222008732:function:github-to-lambda-demo || exit 1
       - echo "DONE!!"
